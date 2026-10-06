@@ -1,0 +1,39 @@
+Assignment 2 closeout verification
+Run time: 2026-10-06T19:49:49.744676-04:00
+Reviewed response snapshot: ad5040fcca3ec15ad23d210bc2066863180952cc
+These are file/contract checks, not model runs or factual validation.
+$ python tools/check_frozen_core.py
+FROZEN CORE INTACT
+$ git diff a378256 -- FROZEN_CORE_SHA256.txt core/common_instructions.md core/input_schema.json core/output_schema.json tools/build_prompt.py tools/check_frozen_core.py tools/new_agent.py tools/validate_response.py
+
+PASS: all 7 protected files and the manifest match the initial scaffold commit.
+PASS: populated input fields: agents/creation_agent/cases/primary.json
+PASS: populated input fields: agents/creation_agent/cases/contrast_1.json
+$ python tools/validate_response.py agents/creation_agent/responses/primary_response.json
+VALIDATION PASSED
+PASS: schema fields, array item types, version, citation hygiene and preservation: primary_response.json
+$ python tools/validate_response.py agents/creation_agent/responses/contrast_1_response.json
+VALIDATION PASSED
+PASS: schema fields, array item types, version, citation hygiene and preservation: contrast_1_response.json
+$ python tools/validate_response.py agents/creation_agent/responses/primary_response_v2.json
+VALIDATION PASSED
+PASS: schema fields, array item types, version, citation hygiene and preservation: primary_response_v2.json
+$ python tools/validate_response.py agents/creation_agent/responses/contrast_1_response_v2.json
+VALIDATION PASSED
+PASS: schema fields, array item types, version, citation hygiene and preservation: contrast_1_response_v2.json
+$ python tools/build_prompt.py --agent agents/creation_agent --case agents/creation_agent/cases/primary.json --out /var/folders/dm/t007jnyj0p53xkrcjh0x84wm0000gp/T/assignment2-prompts-011u94jm/primary.txt
+/var/folders/dm/t007jnyj0p53xkrcjh0x84wm0000gp/T/assignment2-prompts-011u94jm/primary.txt
+PASS: rebuilt prompt matches saved closeout packet: primary
+$ python tools/build_prompt.py --agent agents/creation_agent --case agents/creation_agent/cases/contrast_1.json --out /var/folders/dm/t007jnyj0p53xkrcjh0x84wm0000gp/T/assignment2-prompts-011u94jm/contrast_1.txt
+/var/folders/dm/t007jnyj0p53xkrcjh0x84wm0000gp/T/assignment2-prompts-011u94jm/contrast_1.txt
+PASS: rebuilt prompt matches saved closeout packet: contrast_1
+SHA256 of reviewed agent artifacts:
+5429a40fca947e323551b912447ff3fc7c82ceb6b048e3e7b3caa25243ade1f2 agents/creation_agent/specialist_instructions.md
+523bdbb3b984280ce881d67f10ab7517b537478a3c5a03c9c1969d9217cd1630 agents/creation_agent/agent_metadata.json
+fdf05c35b1077f01fd7c2e05774a0f9c56b1436fd4b6e6353a350317ef172aae agents/creation_agent/cases/primary.json
+4440a3e412a1ab1b463a970be34f7cea80bb3ab5a56d76accebb5481f77d169f agents/creation_agent/cases/contrast_1.json
+d526c6fc1b35675c80b426017740437630c8b752196fbbee34a2bc430fcd6abd agents/creation_agent/responses/contrast_1_response.json
+f44322534d18e868facad9a325e8edfc5510bab9f0f05855e5781765c3c1b47f agents/creation_agent/responses/contrast_1_response_v2.json
+fd7aae3969f0d7283e4926a7cfb0008fb95fddcd6f26ab9f139afc4578410046 agents/creation_agent/responses/primary_response.json
+fa8414c1ce476e13ca8565950337487b48ae9f87b2d0de7f9269ae0274ca5cc3 agents/creation_agent/responses/primary_response_v2.json
+ALL CLOSEOUT CHECKS PASSED

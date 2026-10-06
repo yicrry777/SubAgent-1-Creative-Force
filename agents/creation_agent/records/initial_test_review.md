@@ -23,3 +23,7 @@ Revise the specialist instructions so the agent must explicitly identify at leas
 The revised agent preserved the stable technical creation history and the contextual differences between the two cases, while giving more explicit attention to broader enabling conditions and more clearly distinguishing documented evidence from inferred causal explanations.
 
 The revision therefore addressed the identified weakness without changing the common input/output architecture or the agent's bounded Creation Agent responsibility.
+
+## Closeout qualification — 2026-10-06
+
+The fuller review in [final_test_review.md](final_test_review.md) qualifies this initial retest conclusion: the revision improved explicit treatment of enabling conditions and inference, but the primary response's 2026 market statistic is application background rather than evidence of historical emergence. [evidence_verification.md](evidence_verification.md) records the source checks, date/access qualifications and final interpretation. The original four saved responses are unchanged by this closeout. The initial contrast's internal citation marker had already been removed in commit `35a00a2`; its original form remains in `b80d5bc`.
