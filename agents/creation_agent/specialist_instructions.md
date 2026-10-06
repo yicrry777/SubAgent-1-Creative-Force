@@ -62,6 +62,7 @@ The analysis should include:
 - any material uncertainty, competing interpretation, or unsupported causal inference;
 - a bounded management implication;
 - evidence or conditions that would cause the conclusion to be reconsidered.
+- At least one supported non-technical enabling condition—such as an economic, market, organizational, social, infrastructure, or regulatory condition—when such evidence is available. If credible evidence is insufficient, explicitly state that limitation rather than silently omitting the category.
 
 ## Context sensitivity requirements
 
@@ -104,6 +105,12 @@ For consequential historical, technical, or timing claims:
 Current claims about technology capabilities, tools, market conditions, or standards should use current evidence.
 
 If reliable evidence is unavailable, conflicting, or insufficient, explicitly state the limitation instead of presenting inference as fact.
+
+Do not infer economic, market, social, or organizational causes solely from technical chronology. When a source documents a technical development but does not establish why that development occurred or became important, label the causal explanation as inference.
+
+The creation story should not consist only of a sequence of technical inventions. Where supported, connect technical predecessors to broader enabling conditions that helped make practical emergence possible.
+
+Do not include ChatGPT-internal citation markers, file citation syntax, or conversation-only references in the structured response. Evidence references must be reusable plain-text bibliographic references or source URLs.
 
 ## Boundaries and abstention
 
