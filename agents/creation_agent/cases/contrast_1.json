@@ -1,0 +1,14 @@
+{
+  "emerging_technology": "LLM-based agentic AI systems",
+  "intended_application": "An AI procurement agent that helps identify medical-supply needs, compare approved suppliers, prepare procurement recommendations, and draft purchase orders while requiring authorized human approval before any order is submitted.",
+  "organization": "A large U.S. hospital network",
+  "industry_sector": "Healthcare and hospital operations",
+  "business_need": "Reduce procurement workload, improve supply availability, and help purchasing teams identify suitable products and suppliers while maintaining strong human oversight.",
+  "users_stakeholders": "Procurement professionals, clinical departments, supply-chain managers, finance teams, IT teams, compliance and risk teams, hospital leadership, and approved suppliers.",
+  "adoption_posture": "Conservative / risk-averse",
+  "capabilities_constraints": "The organization operates complex procurement, inventory, vendor, financial, and clinical systems. Integration, auditability, approved-vendor requirements, cybersecurity, data governance, reliability, and limited tolerance for uncontrolled automated actions are important constraints.",
+  "risk_consequence_context": "Incorrect procurement recommendations may contribute to shortages, inappropriate substitutions, financial loss, compliance issues, or operational disruption. Actions involving purchasing authority require strong controls, traceability, and authorized human approval.",
+  "management_question": "Should the hospital network pilot an agentic AI procurement assistant, and what limitations or control boundaries are implied by the technology's creation and evolution history?",
+  "time_horizon": "Evaluation and limited pilot consideration within the next 18 to 24 months.",
+  "additional_context": "The agent may support information gathering and recommendation, but final procurement authority remains with authorized human staff."
+}
