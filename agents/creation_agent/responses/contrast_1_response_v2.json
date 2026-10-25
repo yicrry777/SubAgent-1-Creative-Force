@@ -1,0 +1,109 @@
+{
+  "agent": {
+    "name": "Emerging Technology Creation Agent",
+    "specialty": "Technology creation and evolution",
+    "version": "0.2-student"
+  },
+  "analytical_question": "How did LLM-based agentic AI systems come into existence, what combination of prior capabilities made them possible, and what does that creation path imply for a human-approved medical-supply procurement assistant in a large, risk-averse U.S. hospital network considering a limited pilot within 18 to 24 months?",
+  "general_et_finding": "LLM-based agentic AI is best understood as a sequence of converging developments rather than a single invention. The 2017 Transformer made attention-based sequence modeling substantially more parallelizable; large autoregressive models such as GPT-3 demonstrated increasingly general task performance from natural-language instructions and examples; instruction tuning and reinforcement learning from human feedback made model behavior more steerable; research such as ReAct combined language-model reasoning with actions against external environments; Toolformer demonstrated learned API use; and commercial function-calling interfaces made structured tool invocation accessible to application developers. Contemporary agent systems therefore usually consist of a general-purpose model embedded in software scaffolding that supplies tools, permissions, memory, planning or workflow logic, and feedback loops. This history creates an important constraint: the apparent agency of the system does not eliminate the probabilistic and fallible nature of its language-model core.",
+  "application_finding": "For procurement assistance, the most relevant predecessor capabilities are instruction following, structured tool/API use, retrieval from authoritative external systems, multi-step workflow orchestration, and the ability to transform retrieved information into recommendations or draft documents. These capabilities make an LLM agent potentially useful for gathering supply information, comparing approved alternatives, reconciling information across systems, preparing recommendations, and drafting purchase orders. The creation history does not support treating free-form model generation as an authoritative procurement control. Supplier approval status, product identifiers, pricing, inventory, contracting rules, and submission of purchase orders should remain grounded in deterministic enterprise systems and constrained tools, with the model functioning primarily as an orchestration and language layer.",
+  "organization_specific_finding": "For a large U.S. hospital network with low tolerance for uncontrolled purchasing actions, the technology's creation path argues for separating advisory capability from purchasing authority. The proposed use already preserves final procurement authority for authorized humans, which is consistent with this boundary. A pilot should concentrate on read access to approved procurement, inventory, vendor, and product information; recommendation generation; and creation of reviewable draft purchase orders. Any capability that changes enterprise state should be narrowly permissioned and should not permit the model to submit or commit an order autonomously. This conclusion follows specifically from the system-level history of agentic AI: models became agents by being connected to software tools, and therefore the practical risk boundary is substantially determined by what those tools permit the model to read, modify, or execute.",
+  "evidence": [
+    {
+      "claim": "The Transformer architecture replaced recurrence and convolution with attention mechanisms and enabled more parallelizable training, providing a major technical predecessor for modern LLMs.",
+      "source_or_reference": "Vaswani, A. et al. (2017), \"Attention Is All You Need,\" arXiv:1706.03762. https://arxiv.org/abs/1706.03762",
+      "date_or_recency": "2017",
+      "evidence_type": "Original research paper",
+      "notes": "Strong evidence for an architectural predecessor. It does not by itself establish the later emergence of agentic behavior."
+    },
+    {
+      "claim": "Scaling autoregressive language models produced substantial task-agnostic few-shot capabilities through text interaction, creating a general-purpose language interface that later agent systems could use for planning and task interpretation.",
+      "source_or_reference": "Brown, T. et al. (2020), \"Language Models are Few-Shot Learners,\" arXiv:2005.14165. https://arxiv.org/abs/2005.14165",
+      "date_or_recency": "May 2020",
+      "evidence_type": "Original research paper",
+      "notes": "The paper also reports tasks and settings where GPT-3 struggled, so general-purpose language ability should not be interpreted as dependable execution authority."
+    },
+    {
+      "claim": "Commercial API access turned large language models into reusable software services that application developers could integrate without operating the underlying model infrastructure.",
+      "source_or_reference": "OpenAI (2020), \"OpenAI API,\" June 11, 2020. https://openai.com/index/openai-api/",
+      "date_or_recency": "June 2020",
+      "evidence_type": "First-party technical/product announcement",
+      "notes": "This is an important infrastructure and non-technical enabling condition. The stronger causal claim that API commercialization caused agentic AI's emergence is an inference; the source directly establishes broad developer access and integration capability."
+    },
+    {
+      "claim": "Instruction tuning with human feedback substantially improved the ability of language models to follow user intent, while the researchers explicitly reported that the resulting systems could still make simple mistakes.",
+      "source_or_reference": "Ouyang, L. et al. (2022), \"Training language models to follow instructions with human feedback,\" arXiv:2203.02155. https://arxiv.org/abs/2203.02155",
+      "date_or_recency": "March 2022",
+      "evidence_type": "Original research paper",
+      "notes": "Instruction following is especially important for agents because natural-language objectives must be translated into system behavior, but alignment does not make outputs deterministic or error-free."
+    },
+    {
+      "claim": "ReAct demonstrated a pattern in which an LLM interleaves reasoning with task-specific actions and uses external sources or environments to gather information, an important conceptual predecessor of present agent workflows.",
+      "source_or_reference": "Yao, S. et al. (2022), \"ReAct: Synergizing Reasoning and Acting in Language Models,\" arXiv:2210.03629. https://arxiv.org/abs/2210.03629",
+      "date_or_recency": "October 2022",
+      "evidence_type": "Original research paper",
+      "notes": "The results were obtained on research benchmarks and should not be treated as direct evidence of reliability in hospital procurement."
+    },
+    {
+      "claim": "Toolformer showed that a language model could learn when and how to invoke external APIs, including search, calculation, translation, and calendar tools.",
+      "source_or_reference": "Schick, T. et al. (2023), \"Toolformer: Language Models Can Teach Themselves to Use Tools,\" arXiv:2302.04761. https://arxiv.org/abs/2302.04761",
+      "date_or_recency": "February 2023",
+      "evidence_type": "Original research paper",
+      "notes": "This supports the importance of tool use as a predecessor capability but does not establish safe use of high-consequence write-access tools."
+    },
+    {
+      "claim": "Structured function calling became available through a mainstream commercial LLM API in 2023, alongside longer context and lower prices, making programmatic connections between models and application functions easier to implement.",
+      "source_or_reference": "OpenAI (2023), \"Function calling and other API updates,\" June 13, 2023. https://openai.com/index/function-calling-and-other-api-updates/",
+      "date_or_recency": "June 2023",
+      "evidence_type": "First-party technical/product announcement",
+      "notes": "This is evidence of both a technical enabler and an economic/ecosystem condition. It is reasonable but inferential to conclude that easier APIs and lower costs accelerated experimentation with agentic applications."
+    },
+    {
+      "claim": "Current NIST analysis describes the leading agent paradigm as general-purpose AI models embedded in software scaffolding that lets them manipulate tools, and distinguishes access patterns such as read-only, constrained-write, and write permissions.",
+      "source_or_reference": "NIST (2025), \"Lessons Learned from the Consortium: Tool Use in Agent Systems,\" August 5, 2025. https://www.nist.gov/news-events/news/2025/08/lessons-learned-consortium-tool-use-agent-systems",
+      "date_or_recency": "August 2025",
+      "evidence_type": "U.S. government technical analysis informed by an expert workshop",
+      "notes": "Especially relevant to procurement because purchasing risk changes materially when a tool can modify state or commit transactions."
+    },
+    {
+      "claim": "Agent systems can be exposed to indirect prompt injection or agent hijacking that causes unintended actions when malicious instructions enter data the agent consumes.",
+      "source_or_reference": "NIST/CAISI (2025), \"Strengthening AI Agent Hijacking Evaluations,\" January 17, 2025. https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations",
+      "date_or_recency": "January 2025",
+      "evidence_type": "U.S. government technical evaluation report/blog",
+      "notes": "This matters for procurement agents because supplier documents, web content, email, product descriptions, or other external information may be untrusted inputs."
+    },
+    {
+      "claim": "As of 2026, NIST continues to develop agent-specific standards and security work, indicating that agent interoperability, security, evaluation, and risk-management practices are still evolving.",
+      "source_or_reference": "NIST/CAISI (2026), \"AI Agent Standards Initiative\" and related agent-security work. https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure",
+      "date_or_recency": "February-May 2026",
+      "evidence_type": "Current U.S. government standards and security activity",
+      "notes": "This supports treating agent-system controls and standards as an evolving area rather than a fully stabilized engineering discipline."
+    }
+  ],
+  "contrary_evidence_or_limitations": [
+    "The cited research establishes important predecessor capabilities and agent design patterns, but it does not provide direct evidence that an LLM procurement agent can operate reliably across the specific product, clinical, supplier, contracting, and ERP environments of a large hospital network.",
+    "Successful results from ReAct, Toolformer, and related research benchmarks should not be generalized directly to high-consequence procurement workflows.",
+    "The historical record supports a chronology of technical convergence, but causal claims about why agentic AI became commercially important are less certain. API availability, lower costs, market demand, and developer ecosystems are plausible enabling conditions, but their relative causal importance is not established by the technical papers alone.",
+    "Human approval reduces risk but does not automatically control every upstream action. An agent with excessive write permissions could alter data, initiate workflows, or create commitments before a final nominal approval step.",
+    "Agent security and evaluation practices remain an active standards-development area, including work on tool permissions, prompt injection or hijacking, interoperability, and agent evaluation."
+  ],
+  "confidence_and_uncertainty": "Confidence is high in the core creation chronology: transformer architectures, scaled general-purpose language models, instruction alignment, reasoning/action patterns, tool use, and structured software interfaces are well documented. Confidence is moderate that this history implies a read-mostly, human-authorized procurement-agent boundary because that conclusion follows logically from how agent capabilities are created by attaching permissions and tools to a probabilistic model and is consistent with current NIST analysis. Confidence is lower regarding realized hospital-specific benefits, error rates, integration difficulty, and operational value because direct evidence from this organization's systems and workflows is not available.",
+  "value_opportunity_implication": "The creation path suggests that the strongest near-term value is likely to come from combining a language model's flexible interpretation and drafting capabilities with authoritative procurement systems and structured tools. That combination could reduce information-gathering, comparison, summarization, and document-preparation workload while preserving existing sources of truth. The creation/evolution evidence does not support an estimate of financial ROI or a conclusion that the system should replace procurement professionals.",
+  "risk_governance_implication": "Because agentic capability is produced by coupling a fallible generative model to external tools, the most consequential control boundary is the tool and permission layer. For this application, read-only access should be preferred where possible; write operations should be narrowly scoped, authenticated, logged, reversible where practicable, and separated from final purchasing authority; approved suppliers and product catalogs should be enforced through authoritative systems rather than model judgment; and outputs used for procurement decisions should expose the underlying retrieved evidence for human review. External or supplier-provided content should be treated as potentially untrusted because agent hijacking can cause unintended tool actions. These are bounded implications of the technology's creation path rather than a complete governance or implementation design.",
+  "recommendation_management_implication": "From the technology-creation perspective, management has a reasonable basis to consider a limited pilot, but not autonomous procurement authority. The pilot should test an advisory agent that retrieves from controlled sources, compares approved options, explains its evidence, and drafts recommendations or purchase orders for authorized human approval. Initial tool permissions should be read-only or constrained-write, with no independent order submission. Expansion of authority should depend on organization-specific evidence that the system can reliably use approved data sources and tools, resist manipulation, produce traceable recommendations, and operate within procurement controls. This recommendation does not constitute a conclusion about overall technology maturity, ROI, legal compliance, cybersecurity sufficiency, or organizational readiness.",
+  "change_monitoring_triggers": [
+    "Publication or adoption of mature agent-specific standards, interoperability protocols, authorization models, or security guidance that materially improve constrained tool use.",
+    "Independent or organization-specific evidence showing consistently high performance on realistic hospital procurement workflows, including product matching, approved-supplier selection, substitutions, pricing, and exception handling.",
+    "Evidence that agent-evaluation methods can reliably detect erroneous tool use, unsupported recommendations, prompt injection, or agent hijacking before deployment.",
+    "Material improvements in enterprise tool interfaces that provide granular permissions, transaction previews, immutable logging, provenance, and reversible or staged write operations.",
+    "Material changes in the reliability of underlying foundation models, especially instruction following, factual grounding, long-horizon task execution, and structured tool calling.",
+    "Significant incidents or empirical findings showing that agent systems with access to procurement or other enterprise systems create new failure modes not adequately controlled by current permission boundaries.",
+    "Changes in API availability, economics, or vendor support that materially alter the practicality of maintaining a controlled enterprise agent; economic causality should be evaluated separately rather than inferred solely from technical progress."
+  ],
+  "abstention_or_more_information_needed": [
+    "This specialist does not determine overall technology maturity, hospital organizational readiness, financial ROI, legal or regulatory compliance, complete cybersecurity architecture, or full governance design.",
+    "Before moving beyond a limited pilot, management would need organization-specific evidence about procurement-system APIs and permission models, data quality, approved-vendor controls, product-master consistency, authentication architecture, logging capability, and the exact actions the agent could initiate.",
+    "A reliable judgment about production deployment would also require empirical testing using representative hospital procurement cases, including shortages, clinically sensitive substitutions, conflicting supplier information, unavailable products, price discrepancies, and malicious or misleading external content.",
+    "The available evidence does not establish a hospital-specific error threshold at which autonomous purchasing would be acceptable; therefore this analysis does not support removing authorized human approval."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "emerging_technology": "LLM-based agentic AI systems",
+  "intended_application": "An AI shopping agent that helps customers discover products, compare alternatives, check relevant product information, prepare a shopping cart, and assist with purchase decisions while requiring human approval before a transaction is completed.",
+  "organization": "A mid-sized U.S. direct-to-consumer e-commerce retailer",
+  "industry_sector": "E-commerce and retail",
+  "business_need": "Reduce customer search friction, improve product discovery and conversion, and provide scalable personalized shopping assistance without proportionally increasing customer-service staffing.",
+  "users_stakeholders": "Online shoppers, customer-service teams, merchandising teams, e-commerce managers, IT and data teams, legal/privacy teams, and senior management.",
+  "adoption_posture": "Moderate / fast-follower",
+  "capabilities_constraints": "The retailer has a digital product catalog, inventory and pricing systems, customer accounts, analytics capabilities, and API-accessible commerce infrastructure, but has limited AI engineering capacity compared with major technology companies. Product data quality, integration reliability, privacy requirements, and transaction controls are important constraints.",
+  "risk_consequence_context": "Incorrect recommendations may harm customer trust or conversion. Incorrect price or inventory information may create customer-service and reputational problems. Unauthorized or unintended purchases would create materially higher financial and trust consequences, so human authorization should remain required for transaction completion.",
+  "management_question": "Should the retailer pilot an agentic AI shopping assistant, and what capabilities and control boundaries are justified by the technology's creation and evolution history?",
+  "time_horizon": "Pilot decision within the next 12 months.",
+  "additional_context": "The proposed initial pilot focuses on product discovery, comparison, recommendation, and cart preparation rather than fully autonomous purchasing."
+}
