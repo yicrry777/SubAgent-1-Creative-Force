@@ -1,5 +1,9 @@
 # MASY1-GC 1800 Common Emerging Technology Agent Scaffold v1.0
 
+## Assignment 2 final package
+
+The completed Creation Agent and its test evidence are in [`agents/creation_agent/`](agents/creation_agent/). Start with its [agent overview](agents/creation_agent/README.md), then read the [Agent Record](agents/creation_agent/records/Assignment_2_Agent_Record_Shuoying_Wang.docx) and [source verification addendum](agents/creation_agent/records/evidence_verification.md). The final package is on `main`; the development branch preserves the testing and revision history. Run `python3 agents/creation_agent/records/verify_submission.py` from the repository root to repeat the local checks.
+
 This is the **frozen course baseline** distributed through Brightspace for Emerging Technologies Assignments 2-8.
 
 ## What this scaffold does

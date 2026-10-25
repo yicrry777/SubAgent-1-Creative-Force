@@ -1,6 +1,6 @@
 # Assignment 2 submission guide
 
-Student: **Shuoying Wang**. Repository: [yicrry777/SubAgent-1-Creative-Force](https://github.com/yicrry777/SubAgent-1-Creative-Force). Branch: [`assignment-2-creation-agent`](https://github.com/yicrry777/SubAgent-1-Creative-Force/tree/assignment-2-creation-agent). Agent: `0.2-student`.
+Student: **Shuoying Wang**. Repository: [yicrry777/SubAgent-1-Creative-Force](https://github.com/yicrry777/SubAgent-1-Creative-Force). Final branch: [`main`](https://github.com/yicrry777/SubAgent-1-Creative-Force/tree/main). Development history: `assignment-2-creation-agent`. Agent: `0.2-student`.
 
 ## What to submit or preserve
 
@@ -8,7 +8,7 @@ Student: **Shuoying Wang**. Repository: [yicrry777/SubAgent-1-Creative-Force](ht
 2. **Source verification:** `evidence_verification.md`. This is an integral addendum to the saved v2 outputs: use its qualified interpretation rather than repeating unqualified archived claims.
 3. **Test and revision evidence:** `initial_test_review.md`, `final_test_review.md`, the two populated case inputs, and all four responses in `../responses/`.
 4. **Reproducibility evidence:** `validation_report.txt`, `verify_submission.py`, and both packets under `prompts/`. Rebuilt packets are not original execution transcripts or additional tests.
-5. **Version evidence:** the branch and exact final closeout commit shown in GitHub/the delivery receipt. The tested agent snapshot is `ad5040fcca3ec15ad23d210bc2066863180952cc`; closeout changes only student-editable documentation and verification artifacts.
+5. **Version evidence:** the `main` branch and exact final merge commit shown in GitHub/the delivery receipt. The tested agent snapshot is `ad5040fcca3ec15ad23d210bc2066863180952cc`; finalization changes only student-editable documentation and verification artifacts.
 
 The final delivery receipt is generated after committing, so it can name the exact final commit without placing a self-referential hash inside that commit. In a checkout, `git rev-parse HEAD` identifies the checked-out snapshot. In GitHub, use the specific closeout commit link rather than a moving branch link for grading evidence.
 
@@ -33,7 +33,7 @@ Do not describe the history as three separate initial/revision/retest commits: t
 ## Student actions at submission
 
 - Read the Agent Record's judgment and amend it if it does not reflect your own assessment. Codex's draft is not a claim that you personally performed every check.
-- Compare the packet with the separate Assignment 2 memo and Brightspace submission instructions. Those files were not available in the repository or accessible chat attachments; the available Student Guide and record template were used.
+- The separate Assignment 2 memo was checked against this package. Confirm any current Brightspace submission instructions before uploading; that process is outside this repository.
 - Submit the required files/links in Brightspace. This closeout does not submit coursework to the learning-management system.
 
 No third context or fresh model run is claimed. Two contexts meet the available Student Guide's minimum; its preference for three does not make the unused contrast starter a completed test. Structural validity and source verification do not establish production readiness.

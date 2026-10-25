@@ -12,11 +12,15 @@ This record accompanies the preserved v2 outputs and the [source verification ad
 
 **GitHub repository:** https://github.com/yicrry777/SubAgent-1-Creative-Force
 
-**Branch:** assignment-2-creation-agent
+**Final branch:** main (development history: assignment-2-creation-agent)
 
 **Commit:** Tested agent: ad5040fcca3ec15ad23d210bc2066863180952cc
 
 **Frozen scaffold version:** MASY1800_ET_Agent_Scaffold_v1_0; seven protected files intact.
+
+**Instructions and configuration:** `../specialist_instructions.md` and `../agent_metadata.json` define the Creation Agent's bounded role and version. The frozen common input and output JSON schemas and prompt/validation tools remain the interface contract.
+
+**Evidence policy:** Use original sources for consequential historical or technical claims, distinguish documented milestones from causal inference, and state uncertainty or abstain where evidence is insufficient.
 
 ## B. Specialist Purpose and Context
 
@@ -70,7 +74,7 @@ This record accompanies the preserved v2 outputs and the [source verification ad
 
 **Most important recommendation to the team:** Keep purchasing authority human. Hand off readiness, value measurement, security/privacy and legal questions to other specialists.
 
-**AI / verification note:** ChatGPT supplied prior outputs. Codex compared files, checked original source pages, qualified claims and reran local checks. This drafted judgment requires student review; the separate Assignment 2 memo was unavailable.
+**AI / verification note:** ChatGPT supplied prior outputs. Codex compared saved files, checked original source pages and the Assignment 2 memo, qualified claims, and reran local checks. The judgment is bounded to the two saved contexts and remains open to the student's own assessment.
 
 ## Version and submission evidence
 
