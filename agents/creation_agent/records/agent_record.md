@@ -74,7 +74,7 @@ This record accompanies the preserved v2 outputs and the [source verification ad
 
 **Most important recommendation to the team:** Keep purchasing authority human. Hand off readiness, value measurement, security/privacy and legal questions to other specialists.
 
-**AI / verification note:** ChatGPT supplied prior outputs. Codex compared saved files, checked original source pages and the Assignment 2 memo, qualified claims, and reran local checks. The judgment is bounded to the two saved contexts and remains open to the student's own assessment.
+**AI / verification note:** ChatGPT supplied the saved v1/v2 outputs. Codex acted as the development and testing assistant: it compared the two contexts and saved files, checked original sources and the Assignment 2 memo, ran the frozen-core check and all four JSON validators, and rebuilt both prompt packets against the saved copies. These checks were rerun on the final `main` package. No fresh ChatGPT model run was made during closeout; two saved contexts do not establish repeatability. The judgment remains open to the student's own assessment.
 
 ## Version and submission evidence
 
